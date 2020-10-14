@@ -24,11 +24,11 @@
 This will respond with the restaurant name.
 
 ### Get restaurant reservation info
-  GET Endpoint- `/api/:user/bookings/:restaurantId`
+  GET Endpoint- `/api/bookings/:restaurantId/:date`
 
 **Path Parameters:**
   * `restaurantId` restaurant id
-  * `user` username
+  * `date` utf date
 
 **Success Status Code:** `200`
 
@@ -48,31 +48,31 @@ This will respond with the available restaurant reservations.
 
 ## POST a reservation date
 ### Add restaurant
-  * POST Endpoint-  `/api/:user/bookings/:restaurantId`
+  * POST Endpoint-  `/api/bookings/:restaurantId/:date`
 
   **Path Parameters:**
   * `restaurantId` restaurant id
-  * `user` username
+  * `date` utf date
 
 **Success Status Code:** `201`
 
 ## UPDATE restaurant reservation
 ### Update reservations
-  * PATCH Endpoint-  `/api/:user/bookings/:restaurantId`
+  * PATCH Endpoint-  `/api/bookings/:restaurantId`/:date
 
   **Path Parameters:**
   * `restaurantId` restaurant id
-  * `user` username
+  * `date` utf date
 
 **Success Status Code:** `204`
 
 
 ## Delete restaurant reservation
 ### Cancel a reservation
-  * DELETE Endpoint-  `/api/bookings/:restaurantId`
+  * DELETE Endpoint-  `/api/bookings/:restaurantId/:date`
 
   **Path Parameters:**
   * `restaurantId` restaurant id
-  * `user` username
+  * `date` utf date
 
 **Success Status Code:** `204`
