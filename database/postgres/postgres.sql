@@ -19,11 +19,11 @@ CREATE TABLE dates (
 
 CREATE TABLE reservation_times (
   times_id SERIAL PRIMARY KEY,
-  time_slot TIME,
+  time_slot VARCHAR,
   booked BOOLEAN DEFAULT false,
-  -- restaurant_name VARCHAR NOT NULL,
-  -- booking_date DATE NOT NULL,
-  dates_id INT FOREIGN KEY REFERENCES dates(dates_id) ON DELETE SET CASCADE
+  restaurant_name VARCHAR NOT NULL,
+  booking_date VARCHAR NOT NULL,
+  dates_id INT FOREIGN KEY REFERENCES dates(dates_id) ON DELETE CASCADE
   _user_id INT FOREIGN KEY REFERENCES users(_user_id) ON DELETE SET DEFAULT
 )
 
@@ -31,7 +31,7 @@ CREATE TABLE users (
   _user_id SERIAL PRIMARY KEY,
   first_name VARCHAR NOT NULL,
   last_name VARCHAR NOT NULL,
-  phone INT NOT NULL,
+  phone VARCHAR NOT NULL,
   email VARCHAR NOT NULL,
   party_size INT NOT NULL,
 )

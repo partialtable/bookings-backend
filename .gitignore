@@ -27,3 +27,5 @@ dist/
 config.js
 
 README2.md
+
+*.csv

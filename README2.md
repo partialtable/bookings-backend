@@ -4,7 +4,6 @@
 
 ## Server API
 
-## GET - /api/bookings/restaurantName/:id
 ### Get restaurant name
 
   * GET Endpoint- `/api/restaurant/:restaurantId`

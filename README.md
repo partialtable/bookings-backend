@@ -39,11 +39,9 @@ npm install
 
 # CRUD Operations
 
-## PostgreSQL
-
 ## Server API
 
-## GET - /api/bookings/restaurantName/:id
+## GET a reservation date
 ### Get restaurant name
 
   * GET Endpoint- `/api/restaurant/:restaurantId`
