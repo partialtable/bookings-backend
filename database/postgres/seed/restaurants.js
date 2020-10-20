@@ -8,7 +8,7 @@ const restaurantsGenerator = (start, end) => {
   // writer.pipe(fs.createWriteStream('restaurants.csv'));
   for (var i = start; i <= end; i++) {
 
-    if ( i === 50 || i === 50000 || i === 100000 || i === 250000 || i === 500000 || i === 750000) {
+    if ( i === 50 || i === 50000 || i === 100000 || i === 250000 || i === 500000 || i === 750000 || i === 2000000 || i === 3000000  || i === 4000000) {
       console.log(`Seeded ${i} Records`);
     }
 
@@ -30,7 +30,7 @@ const csvWriter = createCsvWriter({
   ],
 });
 
-const genData = restaurantsGenerator(1,250000);
+const genData = restaurantsGenerator(1, 5000000);
 
 csvWriter.writeRecords(genData)
   .then(() => {

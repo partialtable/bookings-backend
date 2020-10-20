@@ -21,7 +21,7 @@ const usersGenerator = (start, end) => {
 
   for (var i = start; i <= end; i++) {
     // checking for status
-    if ( i === 50 || i === 500 || i === 1150 || i === 2500 || i === 5000 || i === 7500) {
+    if ( i === 50 || i === 500 || i === 1150 || i === 2500 || i === 5000 || i === 7500 || i === 20000 || i === 100000 || i === 500000 || i === 750000 || i === 2000000 || i === 3000000  || i === 4000000) {
       console.log(`Seeded ${i} user records`);
     }
 
@@ -49,7 +49,7 @@ const csvWriter = createCsvWriter({
   ]
 })
 
-const userData = usersGenerator(1, 50000);
+const userData = usersGenerator(1, 5000000);
 
 csvWriter.writeRecords(userData)
   .then(() => {

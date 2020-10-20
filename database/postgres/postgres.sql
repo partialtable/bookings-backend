@@ -79,6 +79,10 @@ COPY reservation_times(time_slot, booked, restaurant_name, booking_date, dates_i
 FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/reservationTimesTable.csv'
 DELIMITER ','
 CSV HEADER;
+COPY reservation_times(time_slot, booked, restaurant_name, booking_date, dates_id, _user_id)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/2reservationTimesTable.csv'
+DELIMITER ','
+CSV HEADER;
 
 
 -- -- mysql -u root -p < database/schema.sql
