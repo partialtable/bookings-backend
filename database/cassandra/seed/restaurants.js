@@ -31,6 +31,7 @@ const restaurantsDataGen = (start, end) => {
 const csvWriter = createCsvWriter({
   path: '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/cassandra/seed/CSV/restaurantsTable.csv',
   header: [
+    { id: 'restaurant_id', title: 'restaurant_id' },
     { id: 'restaurant_name', title: 'restaurant_name' },
   ],
 });

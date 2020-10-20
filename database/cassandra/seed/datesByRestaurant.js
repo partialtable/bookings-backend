@@ -11,7 +11,7 @@ const helper = require('../../helpers/helper');
 const restaurantsDataGen = (start, end) => {
 
   const records = [];
-  for (var i = start; i < end; i++) {
+  for (var i = start; i <= end; i++) {
 
     // check the status
     if ( i === 50 || i === 1000 || i === 5000 || i === 10000 || i === 20000 || i === 50000 || i === 75000 || i === 100000 || i === 150000 || i === 200000 || i === 300000 || i === 400000) {
