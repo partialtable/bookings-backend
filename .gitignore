@@ -29,3 +29,6 @@ config.js
 README2.md
 
 *.csv
+
+database/cassandra/seed/CSV
+database/postgres/seed/CSV

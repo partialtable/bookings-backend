@@ -12,7 +12,7 @@ CREATE TABLE restaurants (
 
 CREATE TABLE dates_by_restaurant (
   dates_id int,
-  booking_date date,
+  booking_date text,
   restaurant_name text,
   PRIMARY KEY(restaurant_name, booking_date)
 )
