@@ -18,8 +18,8 @@ const reservationsDataGen = (start, end) => {
     }
 
     let record = {
-      restaurant_id: (Math.floor(Math.random() * 999999) + 1),
-      reservation_id: (Math.floor(Math.random() * 999999) + 1),
+      restaurant_id: (Math.floor(Math.random() * 4999999) + 1),
+      reservation_id: (Math.floor(Math.random() * 4999999) + 1),
       user_id: i,
       first_name: `${helper.firstNames[Math.floor(Math.random() * 8)]}`,
       last_name: `${helper.lastNames[Math.floor(Math.random() * 8)]}`,
@@ -27,7 +27,7 @@ const reservationsDataGen = (start, end) => {
       email: helper.generateEmail(),
       party_size: Math.floor(Math.random() * (10 - 2) + 2),
       date: helper.generateDate(),
-      time: `${helper.time_slots[Math.floor(Math.random() * 3)]}`,
+      time: `${helper.time_slots[Math.floor(Math.random() * 12)]}`,
     }
     records.push(record)
   }
@@ -36,7 +36,7 @@ const reservationsDataGen = (start, end) => {
 }
 
 const csvWriter = createCsvWriter({
-  path: '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/cassandra/seed/CSV/reservationsByUserTable.csv',
+  path: '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/cassandra/seed/CSV/2reservationsByUserTable.csv',
   header: [
     { id: 'restaurant_id', title: 'restaurant_id' },
     { id: 'reservation_id', title: 'reservation_id' },
@@ -51,7 +51,7 @@ const csvWriter = createCsvWriter({
   ],
 });
 
-const reservationsByUser = reservationsDataGen(1, 500000);
+const reservationsByUser = reservationsDataGen(5000001, 10000000);
 
 csvWriter.writeRecords(reservationsByUser)
   .then(() => {

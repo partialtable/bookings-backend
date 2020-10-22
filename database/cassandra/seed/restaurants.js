@@ -36,7 +36,7 @@ const csvWriter = createCsvWriter({
   ],
 });
 
-const restaurantData = restaurantsDataGen(1, 1000000);
+const restaurantData = restaurantsDataGen(1, 5000000);
 
 csvWriter.writeRecords(restaurantData)
   .then(() => {

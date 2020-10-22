@@ -61,11 +61,11 @@ npm install
 This will respond with the restaurant name.
 
 ### Get restaurant reservation info
-  GET Endpoint- `/api/:restaurantId/bookings/:date`
+  GET Endpoint- `/api/:restaurantId/bookings/:dateId`
 
 **Path Parameters:**
   * `restaurantId` restaurant id
-  * `date` utf date
+  * `dateId` date id
 
 **Success Status Code:** `200`
 
@@ -126,11 +126,10 @@ This will respond with the available restaurant reservations.
     {
       "restaurantId": "Number",
       "date": "String",
-      "name": "String",
       "phone": "String",
       "firstName": "String",
       "lastName": "String",
-      "email": "String",
+      "email": "String",re
       "time": "String",
       "seatingPreference": "String",
       "partySize": "Number"

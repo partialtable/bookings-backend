@@ -14,7 +14,7 @@ const restaurantsGenerator = (start, end) => {
 
     const record = {
       id: i,
-      restaurant_name: `${helper.restaurantBeginning[Math.floor(Math.random() * 11)]}'s ${helper.restaurantEnding[Math.floor(Math.random() * 13)]}`,
+      restaurant_name: helper.generateRestaurantName(),
     }
     records.push(record);
   }

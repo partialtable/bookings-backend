@@ -14,7 +14,7 @@ const restaurantsDataGen = (start, end) => {
   for (var i = start; i <= end; i++) {
 
     // check the status
-    if ( i === 50 || i === 1000 || i === 5000 || i === 10000 || i === 20000 || i === 50000 || i === 75000 || i === 100000 || i === 150000 || i === 200000 || i === 300000 || i === 400000) {
+    if ( i === 50 || i === 1000 || i === 5000 || i === 10000 || i === 20000 || i === 50000 || i === 75000 || i === 100000 || i === 150000 || i === 200000 || i === 300000 || i === 400000 || i === 1000000 || i === 2000000 || i === 3000000 || i === 4000000) {
       console.log(`Seeded ${i} Records`);
     }
 
@@ -38,7 +38,7 @@ const csvWriter = createCsvWriter({
   ],
 });
 
-const restaurantData = restaurantsDataGen(1, 500000);
+const restaurantData = restaurantsDataGen(1, 5000000);
 
 csvWriter.writeRecords(restaurantData)
   .then(() => {

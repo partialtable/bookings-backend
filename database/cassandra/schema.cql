@@ -48,3 +48,4 @@ COPY dates_by_restaurant(dates_id, booking_date, restaurant_name) FROM '/Users/k
 COPY times_by_date(reservation_id, booking_date, time_slot, booked, restaurant_id, restaurant_name) FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/cassandra/seed/csv/timesByDateTable.csv' WITH HEADER=TRUE;
 
 COPY reservations_by_user(restaurant_id, reservation_id, user_id, first_name, last_name, phone, email, party_size, date, time) FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/cassandra/seed/csv/reservationsByUserTable.csv' WITH HEADER=TRUE;
+COPY reservations_by_user(restaurant_id, reservation_id, user_id, first_name, last_name, phone, email, party_size, date, time) FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/cassandra/seed/csv/2reservationsByUserTable.csv' WITH HEADER=TRUE;

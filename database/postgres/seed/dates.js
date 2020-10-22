@@ -14,6 +14,7 @@ const datesGenerator = (start, end) => {
     }
 
     const record = {
+      dates_id: i,
       booking_date: helper.generateDate(),
       restaurant_id: (Math.floor(Math.random() * 1000000) + 1),
     }
@@ -25,6 +26,7 @@ const datesGenerator = (start, end) => {
 const csvWriter = createCsvWriter({
   path: '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/CSV/datesTable.csv',
   header: [
+    { id: 'dates_id', title: 'dates_id'},
     { id: 'booking_date', title: 'booking_date'},
     { id: 'restaurant_id', title: 'restaurant_id'},
   ],
