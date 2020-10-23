@@ -41,7 +41,7 @@ CREATE TABLE reservation_times (
   times_id SERIAL PRIMARY KEY,
   time_slot VARCHAR,
   booked BOOLEAN DEFAULT false,
-  -- restaurant_name VARCHAR NOT NULL,
+  -- id VARCHAR NOT NULL,
   restaurant_id INT,
   booking_date VARCHAR NOT NULL,
   -- dates_id INT,
@@ -57,8 +57,21 @@ CREATE TABLE reservation_times (
 
 );
 
+-------------------------------------- restaurants ------------------------------------
 COPY restaurants(id, restaurant_name)
 FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/restaurantsTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY restaurants(id, restaurant_name)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/2restaurantsTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY restaurants(id, restaurant_name)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/3restaurantsTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY restaurants(id, restaurant_name)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/4restaurantsTable.csv'
 DELIMITER ','
 CSV HEADER;
 
@@ -68,19 +81,95 @@ CSV HEADER;
 -- DELIMITER ','
 -- CSV HEADER;
 
-
+-------------------------------------- users ------------------------------------
 COPY users(_user_id, first_name, last_name, phone, email, party_size)
 FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/usersTable.csv'
 DELIMITER ','
 CSV HEADER;
+COPY users(_user_id, first_name, last_name, phone, email, party_size)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/2usersTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY users(_user_id, first_name, last_name, phone, email, party_size)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/3usersTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY users(_user_id, first_name, last_name, phone, email, party_size)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/4usersTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY users(_user_id, first_name, last_name, phone, email, party_size)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/5usersTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY users(_user_id, first_name, last_name, phone, email, party_size)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/6usersTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY users(_user_id, first_name, last_name, phone, email, party_size)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/7usersTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY users(_user_id, first_name, last_name, phone, email, party_size)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/8usersTable.csv'
+DELIMITER ','
+CSV HEADER;
 
-
-COPY reservation_times(times_id, time_slot, booked, restaurant_name, booking_date, dates_id, _user_id)
+-------------------------------------- reservations ------------------------------------
+COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id)
 FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/reservationTimesTable.csv'
 DELIMITER ','
 CSV HEADER;
-COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id, )
+COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id)
 FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/2reservationTimesTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/3reservationTimesTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/4reservationTimesTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/5reservationTimesTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/6reservationTimesTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/7reservationTimesTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/8reservationTimesTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/9reservationTimesTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/10reservationTimesTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/11reservationTimesTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/12reservationTimesTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/13reservationTimesTable.csv'
+DELIMITER ','
+CSV HEADER;
+COPY reservation_times(times_id, time_slot, booked, restaurant_id, booking_date, _user_id)
+FROM '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/csv/14reservationTimesTable.csv'
 DELIMITER ','
 CSV HEADER;
 

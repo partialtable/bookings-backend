@@ -23,14 +23,14 @@ const restaurantsGenerator = (start, end) => {
 }
 
 const csvWriter = createCsvWriter({
-  path: '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/CSV/restaurantsTable.csv',
+  path: '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/CSV/4restaurantsTable.csv',
   header: [
     { id: 'id', title: 'id' },
     { id: 'restaurant_name', title: 'restaurant_name' },
   ],
 });
 
-const genData = restaurantsGenerator(1, 5000000);
+const genData = restaurantsGenerator(15000001, 20000000);
 
 csvWriter.writeRecords(genData)
   .then(() => {

@@ -18,8 +18,7 @@ const reservation_timesGenerator = (start, end) => {
         booked: true,
         restaurant_id: (Math.floor(Math.random() * 10000000) + 1),
         booking_date: helper.generateDate(),
-        dates_id: (Math.floor(Math.random() * 1000000) + 1),
-        _user_id: (Math.floor(Math.random() * 1000000) + 1)
+        _user_id: (Math.floor(Math.random() * 25000000) + 1)
       }
       records.push(record);
     } else {
@@ -29,7 +28,6 @@ const reservation_timesGenerator = (start, end) => {
         booked: false,
         restaurant_id: (Math.floor(Math.random() * 10000000) + 1),
         booking_date: helper.generateDate(),
-        dates_id: null,
         _user_id: null
       }
       records.push(record);
@@ -40,19 +38,18 @@ const reservation_timesGenerator = (start, end) => {
 }
 
 const csvWriter = createCsvWriter({
-  path: '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/CSV/2reservationTimesTable.csv',
+  path: '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/CSV/14reservationTimesTable.csv',
   header: [
     { id: 'times_id', title: 'times_id'},
     { id: 'time_slot', title: 'time_slot'},
     { id: 'booked', title: 'booked'},
-    { id: 'restaurant_name', title: 'restaurant_name'},
+    { id: 'restaurant_id', title: 'restaurant_id'},
     { id: 'booking_date', title: 'booking_date'},
-    { id: 'dates_id', title: 'dates_id'},
     { id: '_user_id', title: 'user_id'},
   ],
 })
 
-const reservationData = reservation_timesGenerator(5000001, 10000000);
+const reservationData = reservation_timesGenerator(65000001, 70000000);
 
 csvWriter.writeRecords(reservationData)
   .then(() => {

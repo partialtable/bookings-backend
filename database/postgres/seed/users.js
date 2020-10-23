@@ -27,7 +27,7 @@ const usersGenerator = (start, end) => {
 }
 
 const csvWriter = createCsvWriter({
-  path: '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/CSV/usersTable.csv',
+  path: '/Users/karlmabunga/Documents/Repository/immersive/partialtablebookings/database/postgres/seed/CSV/8usersTable.csv',
   header: [
     { id: '_user_id', title: '_user_id'},
     { id: 'first_name', title: 'first_name'},
@@ -38,7 +38,7 @@ const csvWriter = createCsvWriter({
   ]
 })
 
-const userData = usersGenerator(1, 5000000);
+const userData = usersGenerator(35000001, 40000000);
 
 csvWriter.writeRecords(userData)
   .then(() => {
