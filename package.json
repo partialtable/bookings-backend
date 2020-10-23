@@ -8,7 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon database/postgres/index.js",
+    "start": "nodemon server/index.js",
     "react-dev": "webpack -d --watch",
     "test": "jest --detectOpenHandles",
     "sql": "mysql -u root -p < database/schema.sql",
