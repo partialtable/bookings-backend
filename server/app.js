@@ -1,7 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const db = require('../database');
+const postdb = require('../database/postgres');
+const cassdb = require('../database/cassandra');
 const calculateReservations = require('./calculateReservations');
 const cors = require('cors');
 

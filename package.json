@@ -8,16 +8,24 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon server/index.js",
+    "start": "nodemon database/postgres/index.js",
     "react-dev": "webpack -d --watch",
     "test": "jest --detectOpenHandles",
-    "seed": "node database/dbseeder.js",
     "sql": "mysql -u root -p < database/schema.sql",
-    "test:coverage": "jest --verbose --coverage --detectOpenHandles"
+    "test:coverage": "jest --verbose --coverage --detectOpenHandles",
+    "cassrestaurants": "node database/cassandra/seed/restaurants.js",
+    "cassreservations": "node database/cassandra/seed/reservationsByUser.js",
+    "casstimes": "node database/cassandra/seed/timesByDate.js",
+    "cassdates": "node database/cassandra/seed/datesByRestaurant.js",
+    "postgresrestaurants": "node database/postgres/seed/restaurants.js",
+    "postgresdates": "node database/postgres/seed/dates.js",
+    "postgresusers": "node database/postgres/seed/users.js",
+    "postgresreservations": "node database/postgres/seed/reservation_times.js"
   },
   "dependencies": {
     "axios": "^0.20.0",
     "cors": "^2.8.5",
+    "csv-writer": "^1.6.0",
     "eslint-config-hackreactor": "github:reactorcore/eslint-config-hackreactor",
     "express": "^4.17.1",
     "faker": "^5.1.0",
@@ -25,7 +33,8 @@
     "lodash": "^4.6.1",
     "mysql": "^2.18.1",
     "mysql-db-seed": "0.0.4",
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.5",
+    "pg-promise": "^10.7.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-modal": "^3.11.2",
