@@ -41,7 +41,7 @@ npm install
 
 ## Server API
 
-## GET a reservation date
+## GET a restaurant info
 ### Get restaurant name
 
   * GET Endpoint- `/api/restaurant/:restaurantId`
