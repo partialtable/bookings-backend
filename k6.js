@@ -6,9 +6,9 @@ const helper = require('./database/helpers/helper.js')
 export const options = {
   stages: [
     { duration: "10s", target: 600 },
-    { duration: "10s", target: 600 },
-    { duration: "5s", target: 1000 },
-    { duration: "15s", target: 1000 },
+    { duration: "10s", target: 1000 },
+    { duration: "5s", target: 2000 },
+    { duration: "15s", target: 2000 },
     // { duration: "30s", target: 0 },
   ],
 };

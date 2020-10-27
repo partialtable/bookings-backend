@@ -19,6 +19,7 @@ const getRestaurantName = (id, callback) => {
 
 const getReservationInfo = (resId, date, callback) => {
   const q =  `SELECT time_slot from reservation_times where restaurant_id = ${resId} and booking_date = '${date}' and booked = false`;
+  // const q =  `SELECT reservation_times.time_slot FROM reservation_times LEFT JOIN restaurants ON restaurants.restaurant_id = ${resId} and reservation_times.booking_date = '${date}' and booked = false`;
   db.query(q)
     .then((res) => {
       // console.log('Reservation Info Success')

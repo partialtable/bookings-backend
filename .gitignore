@@ -32,3 +32,7 @@ README2.md
 
 database/cassandra/seed/CSV
 database/postgres/seed/CSV
+
+# new relic
+newrelic.js
+newrelic_agent.log
