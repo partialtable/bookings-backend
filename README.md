@@ -61,11 +61,11 @@ npm install
 This will respond with the restaurant name.
 
 ### Get restaurant reservation info
-  GET Endpoint- `/api/:restaurantId/bookings/:dateId`
+  GET Endpoint- `/api/:restaurantId/bookings/:date`
 
 **Path Parameters:**
   * `restaurantId` restaurant id
-  * `dateId` date id
+  * `date` date
 
 **Success Status Code:** `200`
 
@@ -112,10 +112,11 @@ This will respond with the available restaurant reservations.
 
 ## UPDATE restaurant reservation
 ### Update reservations
-  * PATCH Endpoint-  `/api/:restaurantId/bookings/:date`
+  * PATCH Endpoint-  `/api/:restaurantId/bookings/:date/user/:user`
 
   **Path Parameters:**
   * `restaurantId` restaurant id
+  * `date` utf date
   * `date` utf date
 
 **Success Status Code:** `204`
